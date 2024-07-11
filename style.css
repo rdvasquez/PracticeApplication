@@ -1,0 +1,37 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  color: white;
+  height: 100vh;
+}
+
+header {
+  color: #186bd0;
+  font-family: "Lucida Sans";
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.content {
+  display: flex;
+  flex-direction: center;
+  width: 900px;
+  height: 200px;
+  background-color: #186bd0;
+  font-size: x-large;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.span {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  font-size: medium;
+}
+
+nav {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
