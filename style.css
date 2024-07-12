@@ -1,37 +1,89 @@
 body {
-  font-family: sans-serif;
   margin: 0;
-  color: white;
-  height: 100vh;
+  background-color: white;
+  color: whitesmoke;
+  font-family: monospace;
 }
 
-header {
-  color: #186bd0;
-  font-family: "Lucida Sans";
-  flex-direction: row;
-  align-items: flex-end;
-}
-
-.content {
-  display: flex;
-  flex-direction: center;
-  width: 900px;
-  height: 200px;
-  background-color: #186bd0;
-  font-size: x-large;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-}
-
-.span {
+.gallery-container {
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
-  font-size: medium;
+  align-items: center;
+  width: 100px;
+  margin: 20px;
 }
 
-nav {
+.large-image-container {
+  width: 300%;
+  padding: 30px;
+  margin: 30px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.thumbnails-container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
   gap: 10px;
-  margin-top: 10px;
+  margin-top: 25px;
+}
+
+.thumbnails-container img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 10px solid #ccc;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.thumbnails-container img:focus,
+.thumbnails-container img:hover {
+  border-color: #333;
+  transform: scale(1.05);
+}
+
+#button-next {
+  position: absolute;
+  z-index: 3;
+  top: 60%;
+  left: 40px;
+  border: 3px grey(255, 255, 255, 0.5);
+  background-color: darkslategrey;
+  color: white;
+  border-radius: 20px;
+  height: 90px;
+  width: 90px;
+  transition: border, background-color, 0.125s, ease-in-out;
+}
+
+#button-previous {
+  position: absolute;
+  z-index: 3;
+  top: 60%;
+  left: 800px;
+  border: 3px grey(255, 255, 255, 0.5);
+  background-color: darkslategrey;
+  color: white;
+  border-radius: 20px;
+  height: 90px;
+  width: 90px;
+  transition: border, background-color, 0.125s, ease-in-out;
+}
+
+@media (max-width: 600px) {
+  .thumbnails-container img {
+    width: 75px;
+    height: 75px;
+  }
+}
+
+@media (max-width: 600px) {
+  .large-image-container img {
+    width: 100px;
+    height: 100px;
+  }
 }
